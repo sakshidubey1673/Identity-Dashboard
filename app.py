@@ -28,15 +28,14 @@ elif os.path.exists("data/demographic.csv"):
     df = pd.read_csv("data/demographic.csv")
     st.sidebar.info("ℹ️ Loading local 'demographic.csv'")
 else:
-    st.sidebar.warning("⚠️ No CSV found! Using Dummy Data.")
-    # Dummy Data for testing
-    data = {
+     st.sidebar.warning("⚠️ No CSV found! Using Dummy Data.")
+     data = {
         'Age': [25, 30, 22, 35, 40, 29, 45, 28, 33, 21, 50, 38, 27, 44, 31],
         'Gender': ['Male', 'Female', 'Male', 'Male', 'Female', 'Female', 'Male', 'Female', 'Male', 'Female', 'Male', 'Female', 'Male', 'Female', 'Male'],
-        'Region': ['North', 'South', 'North', 'West', 'South', 'East', 'North', 'West', 'East', 'South', 'North', 'West', 'South', 'North', 'West'],
+        'Region': ['North', 'South', 'North', 'West', 'South', 'East', 'North', 'West', 'East', 'South', 'North', 'West', 'East', 'South', 'North'],
         'Score': [88, 92, 75, 81, 95, 89, 78, 85, 60, 91, 82, 77, 69, 94, 73]
     }
-    df = pd.DataFrame(data)
+     df = pd.DataFrame(data)
 
 # ---------------------------------------------------------
 # 3. Sidebar Filters
