@@ -128,10 +128,9 @@ with col_right:
             st.error(f"🚨 SECURITY ALERT: {len(problem_data)} Suspicious Identities Detected (Score < {threshold})")
             
             # Data table 
-            st.dataframe(
-                problem_data.style.background_gradient(cmap="Reds", subset=["Score"]),
-                use_container_width=True
-            )
+            st.dataframe(problem_data,
+            use_container_width=True)
+            
             
             
             csv = problem_data.to_csv(index=False).encode('utf-8')
